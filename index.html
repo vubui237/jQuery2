@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Listo</title>
+	<title>Today's Goals</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="styles/base/reset.css">
 	<link rel="stylesheet" href="styles/base/fonts.css">
@@ -26,15 +26,30 @@
 		<div
 		class="progress-box"
 		id="newList">
-			<h3>New To Dos</h3>
+			<h3 style="color: red; font-weight: bold">Not Started</h3>
 		</div>
 
 		<!--Add progress-box from the reademe-->
+		<div class="progress-box">
+			<h3 style="color: orange; font-weight: bold">In Progress</h3>
+			<ul class="list-group" id="currentList"></ul>
+			</div>
+		<div class="progress-box">
+			<h3 style="color: #71FB4F; font-weight: bold" >Achieved</h3>
+			<ul class="list-group" id="archivedList"></ul>
+			</div>
 	</section>
 
 	<!-- FORM -->
 	<!--Add new task form here -->
-
+	 <section id="newTaskForm">
+			<h3 class="todo-form-title">Let's Start!</h3>
+			<div class="form-input-container">
+				<img id="cancel" src="./img/icons/cross.png" alt="close form icon">
+				<input id="newItemInput" class="todo-title-input form-input" type="text" placeholder="Enter your goal">
+				<button id="saveNewItem" class="complete-todo-button">+Add</button>
+			</div>
+	</section> 
 	<!-- FOOTER -->
 	<footer class="todo-footer">
 		<img id="add-todo" class="add-todo-button show-add-todo" src="./img/icons/add-button.png" alt="add new todo">
@@ -44,6 +59,7 @@
 	<!--jQuery-->
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	<!--INclude your script file here -->
+	<script src="./app/scripts/scripts.js"></script>
 </main>
 </body>
 </html>
